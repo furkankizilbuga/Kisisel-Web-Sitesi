@@ -1,4 +1,6 @@
-import './App.css'
+import "./index.css"
+import '@fontsource-variable/inter';
+
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -9,7 +11,7 @@ import Skills from './components/Skills'
 function App() {
 
   return (
-    <div>
+    <div className="font-main-font mx-32 ">
       <Header />
       <Hero />
       <Skills />

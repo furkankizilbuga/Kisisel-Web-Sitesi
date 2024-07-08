@@ -2,12 +2,12 @@ export default function Profile() {
 
 
     return (
-        <section className="profile">
-            <h2>Profile</h2>
-            <div>
+        <section className="profile border-t border-[#BAB2E7]">
+            <h2 className="text-title text-5xl font-semibold">Profile</h2>
+            <div className="flex">
                 <div className="profile-box">
-                    <h3>Profile</h3>
-                    <div>
+                    <h3 className="text-main-purple text-3xl">Profile</h3>
+                    <div className="flex">
                         <div>
                             <p>Doğum tarihi</p>
                             <p>İkamet Şehri</p>
@@ -23,13 +23,13 @@ export default function Profile() {
                     </div>
                 </div>
                 <div className="about-box">
-                    <h3>About Me</h3>
+                    <h3 className="text-main-purple text-3xl">About Me</h3>
                     <div>
-                        <p>
+                        <p className="text-main-light-grey text-lg">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                             Veniam aut, odit laborum aliquam voluptatum nisi mollitia.
                         </p>
-                        <p>
+                        <p className="text-main-light-grey text-lg">
                             Mnima accusamus ratione soluta aperiam sit voluptate? 
                             Dicta quod deserunt quam temporibus cumque magnam! 
                         </p>

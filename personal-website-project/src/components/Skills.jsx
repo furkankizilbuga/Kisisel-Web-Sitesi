@@ -2,12 +2,12 @@ export default function Skills() {
 
 
     return (
-        <section className="skills">
-            <h2>Skills</h2>
-            <div>
+        <section>
+            <h2 className="text-title text-5xl font-semibold">Skills</h2>
+            <div className="flex gap-32">
                 <div>
-                    <h3>Javascript</h3>
-                    <p>
+                    <h3 className="text-3xl text-main-purple font-medium">Javascript</h3>
+                    <p className="text-main-light-grey">
                         Excepteur sint occaecat cupidatat non proident,
                         sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
