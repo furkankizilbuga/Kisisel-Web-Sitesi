@@ -11,14 +11,16 @@ import Skills from './components/Skills'
 function App() {
 
   return (
-    <div className="font-main-font mx-32 ">
-      <Header />
-      <Hero />
-      <Skills />
-      <Profile />
-      <Projects />
+    <>
+      <div className="font-main-font mx-32 ">
+        <Header />
+        <Hero />
+        <Skills />
+        <Profile />
+        <Projects />
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -2,11 +2,11 @@ export default function Projects() {
 
 
     return (
-        <section className="projects border-t border-[#BAB2E7]">
-            <h2 className="text-title text-5xl font-semibold">Projects</h2>
-            <div>
+        <section className="mt-11 mb-36 projects border-t-2 border-[#BAB2E7]">
+            <h2 className="text-title text-5xl font-semibold pt-11">Projects</h2>
+            <div className=" pt-5">
                 <div>
-                    <h3 className="text-main-purple text-3xl">Workintech</h3>
+                    <h3 className="text-main-purple font-medium text-3xl">Workintech</h3>
                     <p className="text-main-light-grey text-sm">
                         A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. 
                         This was created with vanilla JS, SCSS and Parcel Bundler 
