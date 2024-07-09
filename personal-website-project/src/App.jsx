@@ -11,8 +11,8 @@ import Skills from './components/Skills'
 function App() {
 
   return (
-    <>
-      <div className="font-main-font mx-32 ">
+    <div className="dark:bg-[#252128]">
+      <div className="font-main-font mx-32">
         <Header />
         <Hero />
         <Skills />
@@ -20,7 +20,7 @@ function App() {
         <Projects />
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
