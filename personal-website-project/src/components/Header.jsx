@@ -1,21 +1,33 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import { Context } from "../contexts/useContext";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Header() {
 
-    const [darkMode, setDarkMode] = useState(true);
+    //const [isDark, setIsDark] = useLocalStorage("dark", false);
+    const { isDark, setIsDark, setLocalStorage, lang, header } = useContext(Context);
 
     useEffect(() => {
-        if(darkMode === false) {
+        if(isDark) {
             document.documentElement.classList.add("dark");
         } else {
             document.documentElement.classList.remove("dark");
         }
-    }, [darkMode]);
+        
+    }, [isDark]);
 
     const handleThemeSwitch = (e) => {
-        setDarkMode(e.target.checked);
+        setIsDark(e.target.checked)
     };
+    
+    //const [lang, setLocalStorage] = useLocalStorage("lang", "tr");
+
+    //const [header] = useLang(lang);
+
+    const langHandler = () => {
+        if(lang === "tr") setLocalStorage("en")
+        else setLocalStorage("tr")
+    }
 
     return (
         <header className="pt-4">
@@ -24,26 +36,26 @@ export default function Header() {
                     <label className="darkMode">
                         <input 
                             type="checkbox" 
-                            checked={darkMode} 
+                            checked={isDark} 
                             onChange={handleThemeSwitch} 
                         />
                         <span className="slider"></span>
                     </label>
-                    <span className="dark:text-[#D9D9D9]">DARK MODE</span>
+                    {isDark ? <span className="dark:text-[#D9D9D9]">{header.light}</span> : <span className="dark:text-[#D9D9D9]">{header.dark}</span> }
                 </div>
                 <span className="text-sm font-bold text-main-light-grey">|</span>
                 <div>
                     <p className="text-sm text-[#777777] font-bold">
-                        <button className="border-0 font-bold p-0 bg-transparent text-[#4731D3] dark:text-[#BAB2E7]">TÜRKÇE</button>'ye GEÇ
+                        <button onClick={langHandler} className="border-0 font-bold p-0 bg-transparent text-[#4731D3] dark:text-[#BAB2E7]">{header.lang}</button>
                     </p>
                 </div>
             </div>
             <div className="flex justify-between items-center mt-5">
                 <p className="rounded-full p-3 bg-[#EEEBFF] text-[#7B61FF] font-bold inline-flex items-center justify-center w-12 h-12 dark:bg-[#4731D3] dark:text-[#8F88FF]">F</p>
                 <div className="flex gap-3">
-                    <button className="text-main-light-grey px-7 bg-transparent dark:text-[#6B7280]">Skills</button>
-                    <button className="text-main-light-grey px-7 bg-transparent dark:text-[#6B7280]">Projects</button>
-                    <button className="bg-transparent px-7 text-main-purple border-main-purple hover:bg-main-purple hover:text-white dark:bg-white">Hire me</button>
+                    <button className="text-main-light-grey px-7 bg-transparent dark:text-[#6B7280]">{header.skills}</button>
+                    <button className="text-main-light-grey px-7 bg-transparent dark:text-[#6B7280]">{header.projects}</button>
+                    <button className="bg-transparent px-7 text-main-purple border-main-purple hover:bg-main-purple hover:text-white dark:bg-white">{header.hire}</button>
                 </div>
             </div>
         </header>

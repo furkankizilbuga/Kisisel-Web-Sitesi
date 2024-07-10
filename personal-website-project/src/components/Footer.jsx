@@ -1,9 +1,13 @@
+import { useContext } from "react"
+import { Context } from "../contexts/useContext"
+
 /* eslint-disable react/no-unescaped-entities */
 export default function Footer() {
+    const { footer } = useContext(Context);
     return (
         <section className="footer bg-[#F9F9F9] m-0 pt-20 pb-24 dark:bg-[#141414]">
             <div className="mx-32">
-                <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]" >Let's work together on<br /> your next product.</h2>
+                <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]" >{footer.description1}<br />{footer.description2}</h2>
                 <div className="flex items-center justify-between py-10">
                     <button className="flex gap-1 items-center border-none p-0 underline font-medium text-[#AF0C48]">
                         <img src="../assets/👉.svg"/>

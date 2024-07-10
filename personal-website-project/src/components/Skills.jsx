@@ -1,29 +1,30 @@
+import { useContext } from "react";
+import { Context } from "../contexts/useContext";
+
 export default function Skills() {
 
+    const { skills } = useContext(Context);
 
     return (
         <section className="mt-32 mb-11">
-            <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">Skills</h2>
+            <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">{skills.header}</h2>
             <div className="flex gap-32 pt-5">
                 <div>
-                    <h3 className="text-3xl text-main-purple font-medium dark:text-[#B7AAFF]">Javascript</h3>
+                    <h3 className="text-3xl text-main-purple font-medium dark:text-[#B7AAFF]">{skills.javaScript.title}</h3>
                     <p className="text-main-light-grey dark:text-white">
-                        Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {skills.javaScript.description}
                     </p>
                 </div>
                 <div>
-                    <h3>React.Js</h3>
+                    <h3>{skills.react.title}</h3>
                     <p>
-                        Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {skills.react.description}
                     </p>
                 </div>
                 <div>
-                    <h3>Node.Js</h3>
+                    <h3>{skills.node.title}</h3>
                     <p>
-                        Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {skills.node.description}
                     </p>
                 </div>
             </div>
