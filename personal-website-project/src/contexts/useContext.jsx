@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext } from "react";
+import { createContext, useRef } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import useLang from "../hooks/useLang";
 
@@ -10,8 +10,19 @@ const ContextProvider = ({children}) => {
 
     const [header, hero, skills, profile, footer] = useLang(lang);
 
+    // smoothScroll //
+
+    const skillsRef = useRef(null);
+    const bottomRef = useRef(null);
+
+    const handleScroll = (ref) => {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // smoothScroll //
+
     return (
-        <Context.Provider value={{isDark, setIsDark, lang, setLocalStorage, header, hero, skills, profile, footer}}>
+        <Context.Provider value={{isDark, setIsDark, lang, setLocalStorage, header, hero, skills, profile, footer, skillsRef, bottomRef, handleScroll }}>
             {children}
         </Context.Provider>
     )

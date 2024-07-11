@@ -4,8 +4,7 @@ import { Context } from "../contexts/useContext";
 /* eslint-disable react/no-unescaped-entities */
 export default function Header() {
 
-    //const [isDark, setIsDark] = useLocalStorage("dark", false);
-    const { isDark, setIsDark, setLocalStorage, lang, header } = useContext(Context);
+    const { isDark, setIsDark, setLocalStorage, lang, header, handleScroll, skillsRef, bottomRef } = useContext(Context);
 
     useEffect(() => {
         if(isDark) {
@@ -19,10 +18,6 @@ export default function Header() {
     const handleThemeSwitch = (e) => {
         setIsDark(e.target.checked)
     };
-    
-    //const [lang, setLocalStorage] = useLocalStorage("lang", "tr");
-
-    //const [header] = useLang(lang);
 
     const langHandler = () => {
         if(lang === "tr") setLocalStorage("en")
@@ -53,9 +48,9 @@ export default function Header() {
             <div className="flex justify-between items-center mt-5">
                 <p className="rounded-full p-3 bg-[#EEEBFF] text-[#7B61FF] font-bold inline-flex items-center justify-center w-12 h-12 dark:bg-[#4731D3] dark:text-[#8F88FF]">F</p>
                 <div className="flex gap-3">
-                    <button className="text-main-light-grey px-7 bg-transparent dark:text-[#6B7280]">{header.skills}</button>
-                    <button className="text-main-light-grey px-7 bg-transparent dark:text-[#6B7280]">{header.projects}</button>
-                    <button className="bg-transparent px-7 text-main-purple border-main-purple hover:bg-main-purple hover:text-white dark:bg-white">{header.hire}</button>
+                    <button onClick={() => handleScroll(skillsRef)} className="text-main-light-grey px-7 bg-transparent dark:hover:border-white dark:text-[#6B7280]">{header.skills}</button>
+                    <button onClick={() => handleScroll(bottomRef)} className="text-main-light-grey px-7 bg-transparent dark:hover:border-white dark:text-[#6B7280]">{header.projects}</button>
+                    <button onClick={() => handleScroll(bottomRef)} className="bg-transparent px-7 text-main-purple border-main-purple hover:bg-main-purple dark:bg-white">{header.hire}</button>
                 </div>
             </div>
         </header>

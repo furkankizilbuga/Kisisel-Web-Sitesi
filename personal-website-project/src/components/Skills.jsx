@@ -3,10 +3,10 @@ import { Context } from "../contexts/useContext";
 
 export default function Skills() {
 
-    const { skills } = useContext(Context);
+    const { skills, skillsRef } = useContext(Context);
 
     return (
-        <section className="mt-32 mb-11">
+        <section ref={skillsRef} className="mt-32 mb-11 pt-5">
             <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">{skills.header}</h2>
             <div className="flex gap-32 pt-5">
                 <div>
