@@ -3,7 +3,7 @@ import { TextContext } from "../contexts/TextContext";
 
 export default function Projects() {
 
-    const { bottomRef } = useContext(TextContext);
+    const { bottomRef, projects } = useContext(TextContext);
 
     return (
         <section ref={bottomRef}  className="mt-11 mb-36 projects border-t-2 border-[#BAB2E7]">
@@ -22,12 +22,10 @@ export default function Projects() {
                         <span className="text-main-purple border border-main-purple px-2 rounded text-sm font-medium dark:bg-[#383838] dark:text-[#8F88FF] dark:border-[#8F88FF]">axios</span>
                     </div>
                     <div className="flex justify-between">
-                        <span className="border-b border-main-purple text-main-purple dark:text-[#E1E1FF] dark:border-b-[#E1E1FF]">Github</span>
-                        <span className="text-main-purple border-b border-main-purple dark:text-[#E1E1FF] dark:border-b-[#E1E1FF]">View Site</span>
+                        <a href="https://github.com/furkankizilbuga/fsweb-s7-challenge-pizza" target="_blank" className="border-b border-main-purple text-main-purple dark:text-[#E1E1FF] dark:border-b-[#E1E1FF]">Github</a>
+                        <a href="https://fsweb-s7-challenge-pizza-roan.vercel.app/" target="_blank" className="text-main-purple border-b border-main-purple dark:text-[#E1E1FF] dark:border-b-[#E1E1FF]">View Site</a>
                     </div>
                 </div>
-                <div></div>
-                <div></div>
             </div>
         </section>
     )

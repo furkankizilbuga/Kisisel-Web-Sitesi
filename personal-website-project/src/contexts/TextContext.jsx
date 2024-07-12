@@ -8,7 +8,7 @@ const TextContextProvider = ({children}) => {
     const [isDark, setIsDark] = useLocalStorage("dark", false);
     const [lang, setLocalStorage] = useLocalStorage("lang", "tr");
 
-    const [header, hero, skills, profile, footer] = useLang(lang);
+    const [header, hero, skills, profile, projects, footer] = useLang(lang);
 
     // smoothScroll //
 
@@ -22,7 +22,7 @@ const TextContextProvider = ({children}) => {
     // smoothScroll //
 
     return (
-        <TextContext.Provider value={{isDark, setIsDark, lang, setLocalStorage, header, hero, skills, profile, footer, skillsRef, bottomRef, handleScroll }}>
+        <TextContext.Provider value={{isDark, setIsDark, lang, setLocalStorage, header, hero, skills, profile, projects, footer, skillsRef, bottomRef, handleScroll }}>
             {children}
         </TextContext.Provider>
     )
