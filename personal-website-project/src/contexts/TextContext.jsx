@@ -3,7 +3,7 @@ import { createContext, useRef } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import useLang from "../hooks/useLang";
 
-const ContextProvider = ({children}) => {
+const TextContextProvider = ({children}) => {
 
     const [isDark, setIsDark] = useLocalStorage("dark", false);
     const [lang, setLocalStorage] = useLocalStorage("lang", "tr");
@@ -22,11 +22,11 @@ const ContextProvider = ({children}) => {
     // smoothScroll //
 
     return (
-        <Context.Provider value={{isDark, setIsDark, lang, setLocalStorage, header, hero, skills, profile, footer, skillsRef, bottomRef, handleScroll }}>
+        <TextContext.Provider value={{isDark, setIsDark, lang, setLocalStorage, header, hero, skills, profile, footer, skillsRef, bottomRef, handleScroll }}>
             {children}
-        </Context.Provider>
+        </TextContext.Provider>
     )
 }
 
-export const Context = createContext();
-export default ContextProvider;
+export const TextContext = createContext();
+export default TextContextProvider;

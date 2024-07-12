@@ -1,10 +1,10 @@
 import { useContext, useEffect } from "react";
-import { Context } from "../contexts/useContext";
+import { TextContext } from "../contexts/TextContext";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Header() {
 
-    const { isDark, setIsDark, setLocalStorage, lang, header, handleScroll, skillsRef, bottomRef } = useContext(Context);
+    const { isDark, setIsDark, setLocalStorage, lang, header, handleScroll, skillsRef, bottomRef } = useContext(TextContext);
 
     useEffect(() => {
         if(isDark) {

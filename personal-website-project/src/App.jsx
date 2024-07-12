@@ -7,12 +7,12 @@ import Hero from './components/Hero'
 import Profile from './components/Profile'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
-import ContextProvider from "./contexts/useContext";
+import TextContextProvider from "./contexts/TextContext";
 
 function App() {
 
   return (
-    <ContextProvider>
+    <TextContextProvider>
       <div className="dark:bg-[#252128]">
         <div className="font-main-font mx-32">
           <Header />
@@ -23,7 +23,7 @@ function App() {
         </div>
         <Footer />
       </div>
-    </ContextProvider>
+    </TextContextProvider>
   )
 }
 

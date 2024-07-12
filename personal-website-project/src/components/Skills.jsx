@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { Context } from "../contexts/useContext";
+import { TextContext } from "../contexts/TextContext";
 
 export default function Skills() {
 
-    const { skills, skillsRef } = useContext(Context);
+    const { skills, skillsRef } = useContext(TextContext);
 
     return (
         <section ref={skillsRef} className="mt-32 mb-11 pt-5">

@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { Context } from "../contexts/useContext"
+import { TextContext } from "../contexts/TextContext"
 
 export default function Profile() {
 
-    const { profile } = useContext(Context);
+    const { profile } = useContext(TextContext);
     const { about } = profile;
     const { title, birth, residence, education, preferred, myBirth, myResidence, myEducation, myPreferred } = profile.profile
     

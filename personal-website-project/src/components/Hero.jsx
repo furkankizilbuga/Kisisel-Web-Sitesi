@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { Context } from "../contexts/useContext";
+import { TextContext } from "../contexts/TextContext";
 
 export default function Hero() {
 
-    const { hero, handleScroll, bottomRef } = useContext(Context)
+    const { hero, handleScroll, bottomRef } = useContext(TextContext)
 
     return (
         <main className="flex justify-between mt-20">

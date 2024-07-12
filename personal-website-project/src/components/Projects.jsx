@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { Context } from "../contexts/useContext";
+import { TextContext } from "../contexts/TextContext";
 
 export default function Projects() {
 
-    const { bottomRef } = useContext(Context);
+    const { bottomRef } = useContext(TextContext);
 
     return (
         <section ref={bottomRef}  className="mt-11 mb-36 projects border-t-2 border-[#BAB2E7]">

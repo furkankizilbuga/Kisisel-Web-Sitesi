@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { Context } from "../contexts/useContext"
+import { TextContext } from "../contexts/TextContext"
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Footer() {
-    const { footer, bottomRef } = useContext(Context);
+    const { footer, bottomRef } = useContext(TextContext);
     return (
         <section ref={bottomRef} className="footer bg-[#F9F9F9] m-0 pt-20 pb-24 dark:bg-[#141414]">
             <div className="mx-32">
