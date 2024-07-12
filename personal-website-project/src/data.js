@@ -124,6 +124,29 @@ export const data = {
                 description: "After completing my education of English Language and Literature at Istanbul University, I wanted to envision myself in the software field. As a result, I have improved myself in the field while following modern technologies and updates, and I am dedicated to do so further ahead on the road."
             }
         },
+        projects: [
+            {
+                title: "Technological Foods",
+                github: "https://github.com/furkankizilbuga/fsweb-s7-challenge-pizza",
+                site: "https://fsweb-s7-challenge-pizza-roan.vercel.app/",
+                description: "An easy, practical and aesthetic pizza website.",
+                uses: ["react", "axios", "cypress"]
+            },
+            {
+                title: "GRID Game",
+                github: "https://github.com/furkankizilbuga/FSWeb-S9-Sprint-Challenge",
+                site: "https://fsweb-s9-sprint-challenge-t6gq.onrender.com/",
+                description: "A simple grid game that tracks the coordinates.",
+                uses: ["react", "axios", "react-testing-library"]
+            },
+            {
+                title: "Technological Foods",
+                github: "https://github.com/furkankizilbuga/fsweb-s7-challenge-pizza",
+                site: "https://fsweb-s7-challenge-pizza-roan.vercel.app/",
+                description: "An easy, practical and aesthetic pizza website.",
+                uses: ["react", "axios", "cypress"]
+            }
+        ],
         footer: {
             description1: "Let's work together on",
             description2: "your next product!"

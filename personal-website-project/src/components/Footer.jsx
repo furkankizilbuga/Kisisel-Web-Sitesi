@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <section ref={bottomRef} className="footer bg-[#F9F9F9] m-0 pt-20 pb-24 dark:bg-[#141414]">
             <div className="mx-32">
-                <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]" >{footer.description1}<br />{footer.description2}</h2>
+                <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">{footer.description1}<br />{footer.description2}</h2>
                 <div className="flex items-center justify-between py-10">
                     <button className="flex gap-1 items-center border-none p-0 underline font-medium text-[#AF0C48]">
                         <img src="../assets/👉.svg"/>
