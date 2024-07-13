@@ -135,6 +135,7 @@ export const data = {
         },
         projects: [
             {
+                img: "./public/assets/teknolojik.png",
                 title: "Technological Foods",
                 github: "https://github.com/furkankizilbuga/fsweb-s7-challenge-pizza",
                 site: "https://fsweb-s7-challenge-pizza-roan.vercel.app/",
@@ -142,6 +143,7 @@ export const data = {
                 uses: ["react", "axios", "cypress"]
             },
             {
+                img: "./public/assets/grid.png",
                 title: "GRID Game",
                 github: "https://github.com/furkankizilbuga/FSWeb-S9-Sprint-Challenge",
                 site: "https://fsweb-s9-sprint-challenge-t6gq.onrender.com/",
