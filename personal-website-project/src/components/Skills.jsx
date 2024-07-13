@@ -4,29 +4,22 @@ import { TextContext } from "../contexts/TextContext";
 export default function Skills() {
 
     const { skills, skillsRef } = useContext(TextContext);
+    const { skillArr } = skills;
 
     return (
         <section ref={skillsRef} className="mt-32 mb-11 pt-5">
             <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">{skills.header}</h2>
             <div className="flex gap-32 pt-5">
-                <div>
-                    <h3 className="text-3xl text-main-purple pb-4 font-medium dark:text-[#B7AAFF]">{skills.javaScript.title}</h3>
-                    <p className="text-main-light-grey dark:text-white">
-                        {skills.javaScript.description}
-                    </p>
-                </div>
-                <div>
-                    <h3>{skills.react.title}</h3>
-                    <p>
-                        {skills.react.description}
-                    </p>
-                </div>
-                <div>
-                    <h3>{skills.node.title}</h3>
-                    <p>
-                        {skills.node.description}
-                    </p>
-                </div>
+                {skillArr.map((skill, index) => {
+                    return (
+                        <div key={index} className="min-w-44">
+                            <h3 className="text-3xl text-main-purple pb-4 font-medium dark:text-[#B7AAFF]">{skill.title}</h3>
+                            <p className="text-main-light-grey dark:text-white">
+                                {skill.description}
+                            </p>
+                        </div>
+                    )
+                })}
             </div>
         </section>
     )

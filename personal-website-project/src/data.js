@@ -16,18 +16,21 @@ export const data = {
         },
         skills: {
             header: "Beceriler",
-            javaScript: {
-                title: "JavaScript",
-                description: "JavaScript ile dinamik kullanıcı deneyimi oluşturma."
-            },
-            react: {
-                title: "React",
-                description: "Bileşenler aracılığıyla daha temiz bir kodlama ve kullanıcı deneyimi."
-            },
-            node: {
-                title: "Node.Js",
-                description: "Node ile hızlı ve ölçeklenebilir ağ uygulamaları oluşturma."
-            }
+            skillArr: [
+                {
+                    title: "JavaScript",
+                    description: "JavaScript ile dinamik kullanıcı deneyimi oluşturma."
+                },
+                {
+                    title: "React",
+                    description: "Bileşenler aracılığıyla daha temiz bir kodlama ve kullanıcı deneyimi."
+                },
+                {
+                    title: "Node.Js",
+                    description: "Node ile hızlı ve ölçeklenebilir ağ uygulamaları oluşturma."
+                }
+
+            ]
         },
         profile: {
             header: "Profil",
@@ -49,6 +52,7 @@ export const data = {
         },
         projects: [
             {
+                img: "./public/assets/teknolojik.png",
                 title: "Teknolojik Yemekler",
                 github: "https://github.com/furkankizilbuga/fsweb-s7-challenge-pizza",
                 site: "https://fsweb-s7-challenge-pizza-roan.vercel.app/",
@@ -56,6 +60,7 @@ export const data = {
                 uses: ["react", "axios", "cypress"]
             },
             {
+                img: "./public/assets/grid.png",
                 title: "GRID Oyunu",
                 github: "https://github.com/furkankizilbuga/FSWeb-S9-Sprint-Challenge",
                 site: "https://fsweb-s9-sprint-challenge-t6gq.onrender.com/",
@@ -63,11 +68,12 @@ export const data = {
                 uses: ["react", "axios", "react-testing-library"]
             },
             {
-                title: "Teknolojik Yemekler",
-                github: "https://github.com/furkankizilbuga/fsweb-s7-challenge-pizza",
-                site: "https://fsweb-s7-challenge-pizza-roan.vercel.app/",
-                description: "Kolay, pratik ve estetik bir pizza sitesi. ",
-                uses: ["react", "axios", "cypress"]
+                img: "./public/assets/calculator.png",
+                title: "Basit Hesap Makinesi",
+                github: "https://github.com/furkankizilbuga/Basic-Calculator-S10-D1",
+                site: "https://basic-calculator-s10-d1.vercel.app/",
+                description: "İşlevsel",
+                uses: ["react", "react-testing-library"]
             }
         ],
         footer: {
@@ -93,18 +99,21 @@ export const data = {
         },
         skills: {
             header: "Skills",
-            javaScript: {
-                title: "JavaScript",
-                description: "Creating dynamic user experience with JavaScript."
-            },
-            react: {
-                title: "React",
-                description: "Cleaner coding and better user experience with React components."
-            },
-            node: {
-                title: "Node.Js",
-                description: "Creating fast and scalable network applications with Node."
-            }
+            skillArr: [
+                {
+                    title: "JavaScript",
+                    description: "Creating dynamic user experience with JavaScript."
+                },
+                {
+                    title: "React",
+                    description: "Cleaner coding and better user experience with React components."
+                },
+                {
+                    title: "Node.Js",
+                    description: "Creating fast and scalable network applications with Node."
+                }
+
+            ]
         },
         profile: {
             header: "Profile",
@@ -140,11 +149,12 @@ export const data = {
                 uses: ["react", "axios", "react-testing-library"]
             },
             {
-                title: "Technological Foods",
-                github: "https://github.com/furkankizilbuga/fsweb-s7-challenge-pizza",
-                site: "https://fsweb-s7-challenge-pizza-roan.vercel.app/",
-                description: "An easy, practical and aesthetic pizza website.",
-                uses: ["react", "axios", "cypress"]
+                img: "./public/assets/calculator.png",
+                title: "Simple Calculator",
+                github: "https://github.com/furkankizilbuga/Basic-Calculator-S10-D1",
+                site: "https://basic-calculator-s10-d1.vercel.app/",
+                description: "Functional.",
+                uses: ["react", "react-testing-library"]
             }
         ],
         footer: {

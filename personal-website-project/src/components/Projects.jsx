@@ -11,7 +11,8 @@ export default function Projects() {
             <div className="flex justify-between pt-5">
                 {projects.map((project, index) => {
                     return (
-                            <div key={index}>
+                            <div key={index} className="min-w-80 flex flex-col gap-2">
+                                <img className="w-80 h-48 rounded-sm" src={project.img} />
                                 <h3 className="text-main-purple font-medium text-3xl dark:text-[#B7AAFF]">{project.title}</h3>
                                 <p className="text-main-light-grey text-sm dark:text-white">
                                     {project.description}
