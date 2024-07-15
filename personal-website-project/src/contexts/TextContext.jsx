@@ -13,7 +13,8 @@ const TextContextProvider = ({children}) => {
     // smoothScroll //
 
     const skillsRef = useRef(null);
-    const bottomRef = useRef(null);
+    const footerRef = useRef(null);
+    const projectsRef = useRef(null);
 
     const handleScroll = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -22,7 +23,7 @@ const TextContextProvider = ({children}) => {
     // smoothScroll //
 
     return (
-        <TextContext.Provider value={{ error, isPending, data, isDark, setIsDark, langLocal, setLocalStorage, skillsRef, bottomRef, handleScroll }}>
+        <TextContext.Provider value={{ error, isPending, data, isDark, setIsDark, langLocal, setLocalStorage, skillsRef, footerRef, projectsRef, handleScroll }}>
             {children}
         </TextContext.Provider>
     )

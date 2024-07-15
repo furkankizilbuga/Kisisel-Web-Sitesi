@@ -14,10 +14,10 @@ export default function Hero() {
     const { description, header1, header2, hire } = data[0].hero;
 
     return (
-        <main className="flex justify-between mt-20">
-            <div className="flex flex-col gap-10">
+        <main className="flex lg:justify-between flex-row lg:mt-20 lg:gap-2 max-[1200px]:flex-col-reverse">
+            <div className="flex flex-col gap-10 max-w-2xl">
                 <p className="font-semibold text-main-purple dark:text-[#B7AAFF]">Furkan Kızılbuğa</p>
-                <h1 className="text-title font-bold text-7xl dark:text-[#AEBCCF]">{header1}<br />{header2}</h1>
+                <h1 className="text-title font-bold text-7xl max-[1200px]:text-6xl dark:text-[#AEBCCF]">{header1}<br />{header2}</h1>
                 <p className="text-main-light-grey dark:text-white">
                     {description}
                 </p>
@@ -27,7 +27,7 @@ export default function Hero() {
                     <a href="https://www.linkedin.com/in/furkan-k%C4%B1z%C4%B1lbu%C4%9Fa-8b0bb8278/" target="_blank" className="transition cursor-pointer flex items-center border rounded-lg font-medium px-5 text-main-purple bg-transparent border-main-purple hover:bg-main-purple hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black"><i className="dark:text-[#BAB2E7]" />Linkedin</a>
                 </div>
             </div>
-            <img />
+            <img className="rounded-md max-[1200px]:w-56" src="./public/assets/vesikalık.jpeg " />
         </main>
     )
 }

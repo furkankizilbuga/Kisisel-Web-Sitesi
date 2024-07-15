@@ -21,7 +21,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TextContextProvider>
         <div className="dark:bg-[#252128]">
-          <div className="font-main-font mx-32">
+          <div className="font-main-font mx-40">
             <Header />
             <Hero />
             <Skills />

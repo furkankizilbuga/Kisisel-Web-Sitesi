@@ -5,7 +5,7 @@ import { useTextMutation } from "../services/mutations";
 /* eslint-disable react/no-unescaped-entities */
 export default function Header() {
 
-    const { data, isPending, error, isDark, setIsDark, setLocalStorage, langLocal, handleScroll, skillsRef, bottomRef } = useContext(TextContext);
+    const { data, isPending, error, isDark, setIsDark, setLocalStorage, langLocal, handleScroll, skillsRef, footerRef, projectsRef } = useContext(TextContext);
 
     useEffect(() => {
         if(isDark) {
@@ -63,9 +63,9 @@ export default function Header() {
             <div className="flex justify-between items-center mt-5">
                 <p className="rounded-full p-3 bg-[#EEEBFF] text-[#7B61FF] font-bold inline-flex items-center justify-center w-12 h-12 dark:bg-[#4731D3] dark:text-[#8F88FF]">F</p>
                 <div className="flex gap-3">
-                    <button onClick={() => handleScroll(skillsRef)} className="text-main-light-grey px-7 bg-transparent dark:hover:border-white dark:text-[#6B7280]">{skills}</button>
-                    <button onClick={() => handleScroll(bottomRef)} className="text-main-light-grey px-7 bg-transparent dark:hover:border-white dark:text-[#6B7280]">{projects}</button>
-                    <button onClick={() => handleScroll(bottomRef)} className="bg-transparent px-7 text-main-purple border-main-purple hover:bg-main-purple dark:bg-white">{hire}</button>
+                    <button onClick={() => handleScroll(skillsRef)} className="text-main-light-grey px-7 bg-transparent hover:bg-main-purple hover:text-white dark:hover:border-white dark:hover:bg-transparent dark:text-[#6B7280]">{skills}</button>
+                    <button onClick={() => handleScroll(projectsRef)} className="text-main-light-grey px-7 bg-transparent hover:bg-main-purple hover:text-white dark:hover:border-white dark:hover:bg-transparent dark:text-[#6B7280]">{projects}</button>
+                    <button onClick={() => handleScroll(footerRef)} className="bg-transparent px-7 text-main-purple border-main-purple hover:transition hover:bg-main-purple hover:text-white dark:bg-white dark:hover:bg-main-purple ">{hire}</button>
                 </div>
             </div>
         </header>
