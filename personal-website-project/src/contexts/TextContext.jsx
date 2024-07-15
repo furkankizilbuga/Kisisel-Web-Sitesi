@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import { createContext, useRef } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
-import useLang from "../hooks/useLang";
+import { useTexts } from "../services/queries";
 
 const TextContextProvider = ({children}) => {
 
     const [isDark, setIsDark] = useLocalStorage("dark", false);
-    const [lang, setLocalStorage] = useLocalStorage("lang", "tr");
+    const [langLocal, setLocalStorage] = useLocalStorage("lang", "tr");
 
-    const [header, hero, skills, profile, projects, footer] = useLang(lang);
+    const {isPending, error, data} = useTexts(langLocal);
 
     // smoothScroll //
 
@@ -22,7 +22,7 @@ const TextContextProvider = ({children}) => {
     // smoothScroll //
 
     return (
-        <TextContext.Provider value={{isDark, setIsDark, lang, setLocalStorage, header, hero, skills, profile, projects, footer, skillsRef, bottomRef, handleScroll }}>
+        <TextContext.Provider value={{ error, isPending, data, isDark, setIsDark, langLocal, setLocalStorage, skillsRef, bottomRef, handleScroll }}>
             {children}
         </TextContext.Provider>
     )

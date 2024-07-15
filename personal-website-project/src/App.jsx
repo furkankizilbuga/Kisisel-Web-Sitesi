@@ -8,22 +8,30 @@ import Profile from './components/Profile'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import TextContextProvider from "./contexts/TextContext";
+import {
+  QueryClient,
+  QueryClientProvider
+} from "@tanstack/react-query"
+
+const queryClient = new QueryClient();
 
 function App() {
 
   return (
-    <TextContextProvider>
-      <div className="dark:bg-[#252128]">
-        <div className="font-main-font mx-32">
-          <Header />
-          <Hero />
-          <Skills />
-          <Profile />
-          <Projects />
+    <QueryClientProvider client={queryClient}>
+      <TextContextProvider>
+        <div className="dark:bg-[#252128]">
+          <div className="font-main-font mx-32">
+            <Header />
+            <Hero />
+            <Skills />
+            <Profile />
+            <Projects />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </TextContextProvider>
+      </TextContextProvider>
+    </QueryClientProvider>
   )
 }
 

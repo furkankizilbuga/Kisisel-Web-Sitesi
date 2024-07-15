@@ -3,12 +3,17 @@ import { TextContext } from "../contexts/TextContext";
 
 export default function Skills() {
 
-    const { skills, skillsRef } = useContext(TextContext);
-    const { skillArr } = skills;
+    const { data, isPending, error, skillsRef } = useContext(TextContext);
+
+    if(isPending) return <div className="text-center">Loading...</div>
+    if(error) return <div className="text-center">{error.message}</div>
+
+
+    const { header, skillArr } = data[0].skills;
 
     return (
         <section ref={skillsRef} className="mt-32 mb-11 pt-5">
-            <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">{skills.header}</h2>
+            <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">{header}</h2>
             <div className="lg:flex gap-28 pt-5">
                 {skillArr.map((skill, index) => {
                     return (
