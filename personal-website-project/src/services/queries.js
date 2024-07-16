@@ -8,6 +8,7 @@ export const useTexts = (lang) => {
       const response = await axios.get("https://6694d87f4bd61d8314c8e0c0.mockapi.io/texts?lang=" + lang);
       console.log(response)
       return response.data; 
-    }
+    },
+    staleTime: Infinity
   });
 };

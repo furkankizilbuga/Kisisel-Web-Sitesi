@@ -3,20 +3,17 @@ import { TextContext } from "../contexts/TextContext";
 
 export default function Hero() {
 
-    const { handleScroll, bottomRef, data, isPending, error } = useContext(TextContext)
+    const { handleScroll, bottomRef, data } = useContext(TextContext)
 
     
-
-    if(isPending) return <div className="text-center">Loading...</div>
-    if(error) return <div className="text-center">{error.message}</div>
 
 
     const { description, header1, header2, hire } = data[0].hero;
 
     return (
-        <main className="flex lg:justify-between flex-row lg:mt-20 lg:gap-2 max-[1200px]:flex-col-reverse">
+        <main className="flex lg:justify-between flex-row mt-20 gap-2 max-[1200px]:flex-col-reverse">
             <div className="flex flex-col gap-10 max-w-2xl">
-                <p className="font-semibold text-main-purple dark:text-[#B7AAFF]">Furkan Kızılbuğa</p>
+                <p className="font-semibold text-main-purple dark:text-[#B7AAFF]"><hr className="w-16 border-b-1 dark:border-[#B7AAFF] border-main-purple inline-block mr-2 mb-1" />Furkan Kızılbuğa</p>
                 <h1 className="text-title font-bold text-7xl max-[1200px]:text-6xl dark:text-[#AEBCCF]">{header1}<br />{header2}</h1>
                 <p className="text-main-light-grey dark:text-white">
                     {description}

@@ -3,10 +3,7 @@ import { TextContext } from "../contexts/TextContext";
 
 export default function Projects() {
 
-    const { isPending, error, data, projectsRef } = useContext(TextContext);
-
-    if(isPending) return <div className="text-center">Loading...</div>
-    if(error) return <div className="text-center">{error.message}</div>
+    const { data, projectsRef } = useContext(TextContext);
 
 
     const { projects } = data[0];
@@ -17,7 +14,7 @@ export default function Projects() {
             <div className="flex xl:flex-row xl:justify-between flex-col items-center gap-10 pt-12 xl:pt-5">
                 {projects.map((project, index) => {
                     return (
-                            <div key={index} className="min-w-80 flex flex-col gap-2">
+                            <div key={index} className="min-w-80 max-w-80 flex flex-col gap-2">
                                 <img className="w-80 h-48 rounded-sm" src={project.img} />
                                 <h3 className="text-main-purple font-medium text-3xl dark:text-[#B7AAFF]">{project.title}</h3>
                                 <p className="text-main-light-grey text-sm dark:text-white">

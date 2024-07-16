@@ -5,7 +5,7 @@ import { useTextMutation } from "../services/mutations";
 /* eslint-disable react/no-unescaped-entities */
 export default function Header() {
 
-    const { data, isPending, error, isDark, setIsDark, setLocalStorage, langLocal, handleScroll, skillsRef, footerRef, projectsRef } = useContext(TextContext);
+    const { data, isDark, setIsDark, setLocalStorage, langLocal, handleScroll, skillsRef, footerRef, projectsRef } = useContext(TextContext);
 
     useEffect(() => {
         if(isDark) {
@@ -32,9 +32,6 @@ export default function Header() {
 
         mutation.mutate(langLocal)
     }
-
-    if(isPending) return <div className="text-center">Loading...</div>
-    if(error) return <div className="text-center">{error.message}</div>
 
 
     const { dark, hire, lang, light, projects, skills } = data[0].header;
@@ -63,9 +60,9 @@ export default function Header() {
             <div className="flex justify-between items-center mt-5">
                 <p className="rounded-full p-3 bg-[#EEEBFF] text-[#7B61FF] font-bold inline-flex items-center justify-center w-12 h-12 dark:bg-[#4731D3] dark:text-[#8F88FF]">F</p>
                 <div className="flex gap-3">
-                    <button onClick={() => handleScroll(skillsRef)} className="text-main-light-grey px-7 bg-transparent hover:bg-main-purple hover:text-white dark:hover:border-white dark:hover:bg-transparent dark:text-[#6B7280]">{skills}</button>
-                    <button onClick={() => handleScroll(projectsRef)} className="text-main-light-grey px-7 bg-transparent hover:bg-main-purple hover:text-white dark:hover:border-white dark:hover:bg-transparent dark:text-[#6B7280]">{projects}</button>
-                    <button onClick={() => handleScroll(footerRef)} className="bg-transparent px-7 text-main-purple border-main-purple hover:transition hover:bg-main-purple hover:text-white dark:bg-white dark:hover:bg-main-purple ">{hire}</button>
+                    <button onClick={() => handleScroll(skillsRef)} className="text-main-light-grey px-7 bg-transparent hover:bg-main-purple hover:text-white dark:hover:border-white dark:hover:bg-transparent dark:text-[#6B7280] max-[700px]:text-sm">{skills}</button>
+                    <button onClick={() => handleScroll(projectsRef)} className="text-main-light-grey px-7 bg-transparent hover:bg-main-purple hover:text-white dark:hover:border-white dark:hover:bg-transparent dark:text-[#6B7280] max-[700px]:text-sm">{projects}</button>
+                    <button onClick={() => handleScroll(footerRef)} className="bg-transparent px-7 text-main-purple border-main-purple hover:transition hover:bg-main-purple hover:text-white dark:bg-white dark:hover:bg-main-purple max-[700px]:text-sm">{hire}</button>
                 </div>
             </div>
         </header>

@@ -3,10 +3,7 @@ import { TextContext } from "../contexts/TextContext";
 
 export default function Skills() {
 
-    const { data, isPending, error, skillsRef } = useContext(TextContext);
-
-    if(isPending) return <div className="text-center">Loading...</div>
-    if(error) return <div className="text-center">{error.message}</div>
+    const { data, skillsRef } = useContext(TextContext);
 
 
     const { header, skillArr } = data[0].skills;
