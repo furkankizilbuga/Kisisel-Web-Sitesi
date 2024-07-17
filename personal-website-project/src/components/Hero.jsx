@@ -1,5 +1,8 @@
 import { useContext } from "react";
 import { TextContext } from "../contexts/TextContext";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 export default function Hero() {
 
@@ -19,9 +22,9 @@ export default function Hero() {
                     {description}
                 </p>
                 <div className="flex gap-3">
-                    <button onClick={() => handleScroll(footerRef)} className="text-main-purple bg-transparent transition border-main-purple hover:bg-main-purple hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black">{hire}</button>
-                    <a href="https://github.com/furkankizilbuga" target="_blank" className="transition cursor-pointer flex items-center border rounded-lg font-medium px-5 text-main-purple bg-transparent border-main-purple hover:bg-main-purple hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black"><i className="dark:text-[#BAB2E7]" />Github</a>
-                    <a href="https://www.linkedin.com/in/furkan-k%C4%B1z%C4%B1lbu%C4%9Fa-8b0bb8278/" target="_blank" className="transition cursor-pointer flex items-center border rounded-lg font-medium px-5 text-main-purple bg-transparent border-main-purple hover:bg-main-purple hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black"><i className="dark:text-[#BAB2E7]" />Linkedin</a>
+                    <button onClick={() => handleScroll(footerRef)} className="text-main-purple bg-transparent transition border-main-purple hover:bg-main-purple   hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black">{hire}</button>
+                    <a href="https://github.com/furkankizilbuga" target="_blank" className="transition cursor-pointer gap-1 flex items-center border rounded-lg font-medium px-5 md:text-md  text-main-purple bg-transparent border-main-purple hover:bg-main-purple hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black"><i className="dark:text-[#BAB2E7]" /><FontAwesomeIcon icon={faGithub} />Github</a>
+                    <a href="https://www.linkedin.com/in/furkan-k%C4%B1z%C4%B1lbu%C4%9Fa-8b0bb8278/" target="_blank" className="gap-1 transition cursor-pointer flex items-center md:text-md  border rounded-lg font-medium px-5 text-main-purple bg-transparent border-main-purple hover:bg-main-purple hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black"><i className="dark:text-[#BAB2E7]" /><FontAwesomeIcon icon={faLinkedinIn} />Linkedin</a>
                 </div>
             </div>
             <img className="rounded-md max-[1200px]:w-56" src="/Assets/vesikalik.jpeg " />
