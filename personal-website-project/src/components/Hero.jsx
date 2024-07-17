@@ -24,7 +24,7 @@ export default function Hero() {
                     <a href="https://www.linkedin.com/in/furkan-k%C4%B1z%C4%B1lbu%C4%9Fa-8b0bb8278/" target="_blank" className="transition cursor-pointer flex items-center border rounded-lg font-medium px-5 text-main-purple bg-transparent border-main-purple hover:bg-main-purple hover:text-white dark:bg-[#383838] dark:text-[#E1E1FF] dark:border-[#E1E1FF] dark:hover:bg-[#E1E1FF] dark:hover:text-black"><i className="dark:text-[#BAB2E7]" />Linkedin</a>
                 </div>
             </div>
-            <img className="rounded-md max-[1200px]:w-56" src="./public/assets/vesikalık.jpeg " />
+            <img className="rounded-md max-[1200px]:w-56" src="/Assets/vesikalik.jpeg " />
         </main>
     )
 }
