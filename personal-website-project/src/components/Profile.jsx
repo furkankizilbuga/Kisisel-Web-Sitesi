@@ -18,7 +18,7 @@ export default function Profile() {
                         <div className="grid w-32 gap-y-2">
                             <p className="font-semibold dark:text-white">{profile.birth}</p>
                             <p className="font-semibold dark:text-white">{profile.residence}</p>
-                            <p className="font-semibold dark:text-white">{profile.education}</p>
+                            <p className="pb-6 font-semibold dark:text-white">{profile.education}</p>
                             <p className="font-semibold dark:text-white">{profile.preferred}</p>
                         </div>
                         <div  className="grid w-36 gap-y-2">
