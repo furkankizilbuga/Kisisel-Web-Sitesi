@@ -11,7 +11,7 @@ export default function Footer() {
     return (
         <section ref={footerRef} className="footer bg-[#F9F9F9] m-0 pt-20 pb-24 dark:bg-[#141414]">
             <div className="w-3/4 m-auto">
-                <h2 className="text-title text-5xl font-semibold dark:text-[#AEBCCF]">{description1}<br />{description2}</h2>
+                <h2 className="text-title text-5xl max-[640px]:text-3xl font-semibold dark:text-[#AEBCCF]">{description1}<br />{description2}</h2>
                 <div className="flex sm:items-center sm:flex-row sm:justify-between py-10 flex-col gap-2">
                     <a href="mailto:furkankizilbuga12@gmail.com" target="_blank" className="flex gap-1 items-center border-none p-0 underline font-medium text-[#AF0C48]">
                         <span className="dark:text-[#BAB2E7] dark:underline">&#128073;furkankizilbuga12@gmail.com</span>
