@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'main-light-grey': '#6B7280',
+        'main-light-grey': '#52565e',
         'main-purple': '#3730A3',
         'title': '#1F2937'
       },
