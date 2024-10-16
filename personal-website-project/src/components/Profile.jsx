@@ -11,7 +11,7 @@ export default function Profile() {
             <div className="flex flex-col lg:flex-row gap-8 pt-5">
                 <div className="profile-box flex-1 min-w-0">
                     <h3 className="text-main-purple pb-4 font-medium text-3xl dark:text-[#B7AAFF]">{profile.title}</h3>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 text-sm sm:text-base">
                         <div className="flex gap-2 max-w-60">
                             <p className="font-semibold dark:text-white w-24">{profile.birth}</p>
                             <p className="dark:text-white">{profile.myBirth}</p>
@@ -33,7 +33,7 @@ export default function Profile() {
                 <div className="about-box flex-1 min-w-0">
                     <h3 className="text-main-purple pb-4 font-medium text-3xl dark:text-[#B7AAFF]">{about.title}</h3>
                     <div>
-                        <p className="text-main-light-grey text-lg dark:text-white">
+                        <p className="text-main-light-grey text-md sm:text-lg dark:text-white">
                             {about.description}
                         </p>
                     </div>
