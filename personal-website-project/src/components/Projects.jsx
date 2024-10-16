@@ -14,22 +14,22 @@ export default function Projects() {
             <div className="flex xl:flex-row xl:justify-between xl:items-start flex-col items-center gap-10 pt-12 xl:pt-5">
                 {projects.map((project, index) => {
                     return (
-                            <div key={index} className="min-w-80 max-w-80 flex flex-col gap-2">
-                                <img className="w-80 h-48 rounded-sm" src={project.img} />
-                                <h3 className="text-main-purple font-medium text-3xl dark:text-[#B7AAFF]">{project.title}</h3>
-                                <p className="text-main-light-grey text-sm dark:text-white">
+                            <div key={index} className="w-60 sm:w-80 flex flex-col gap-2">
+                                <img className="w-60 h-32 sm:w-80 sm:h-48 rounded-sm" src={project.img} />
+                                <h3 className="text-main-purple font-medium text-xl sm:text-3xl dark:text-[#B7AAFF]">{project.title}</h3>
+                                <p className="text-main-light-grey text-xs sm:text-sm dark:text-white">
                                     {project.description}
                                 </p>
                                 <div className="flex gap-1">
                                     {project.uses.map((use, index) => {
                                         return (
-                                            <span key={index} className="text-main-purple border border-main-purple px-2 rounded text-sm font-medium dark:bg-[#383838] dark:text-[#8F88FF] dark:border-[#8F88FF]">{use}</span>
+                                            <span key={index} className="text-main-purple border border-main-purple px-2 rounded text-xs sm:text-sm font-medium dark:bg-[#383838] dark:text-[#8F88FF] dark:border-[#8F88FF]">{use}</span>
                                         )
                                     })}
                                 </div>
-                                <div className="flex justify-between">
+                                <div className="flex justify-between text-xs sm:text-base">
                                     <a href={project.github} target="_blank" className="border-b border-main-purple text-main-purple dark:text-[#E1E1FF] dark:border-b-[#E1E1FF]">Github</a>
-                                    <a href={project.site} target="_blank" className="text-main-purple border-b border-main-purple dark:text-[#E1E1FF] dark:border-b-[#E1E1FF]">View Site</a>
+                                    <a href={project.site} target="_blank" className={`text-main-purple border-b border-main-purple dark:text-[#E1E1FF] dark:border-b-[#E1E1FF] ${project.site || "hidden"}`}>View Site</a>
                                 </div>
                             </div>
                     )
